@@ -235,6 +235,12 @@
       max-width: 96rem;
     }
   }
+  .-mt-20 {
+    margin-top: calc(var(--spacing) * -20);
+  }
+  .-mt-26 {
+    margin-top: calc(var(--spacing) * -26);
+  }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
@@ -556,6 +562,16 @@
   .md\:row-span-2 {
     @media (width >= 48rem) {
       grid-row: span 2 / span 2;
+    }
+  }
+  .md\:-mt-0 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * -0);
+    }
+  }
+  .md\:mt-0 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 0);
     }
   }
   .md\:h-16 {
