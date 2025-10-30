@@ -238,6 +238,9 @@
   .-mt-20 {
     margin-top: calc(var(--spacing) * -20);
   }
+  .-mt-24 {
+    margin-top: calc(var(--spacing) * -24);
+  }
   .-mt-26 {
     margin-top: calc(var(--spacing) * -26);
   }
@@ -304,8 +307,17 @@
   .w-screen {
     width: 100vw;
   }
+  .max-w-\[60\%\] {
+    max-width: 60%;
+  }
   .max-w-\[75\%\] {
     max-width: 75%;
+  }
+  .max-w-\[80\%\] {
+    max-width: 80%;
+  }
+  .max-w-\[85\%\] {
+    max-width: 85%;
   }
   .max-w-\[90\%\] {
     max-width: 90%;
@@ -756,14 +768,54 @@
       max-width: 80%;
     }
   }
+  .xl\:grid-cols-\[1fr_2fr_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+  }
+  .xl\:grid-cols-\[150px_1fr_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 150px 1fr 1fr;
+    }
+  }
+  .xl\:grid-cols-\[150px_2fr_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 150px 2fr 1fr;
+    }
+  }
   .xl\:grid-cols-\[150px_600px_1fr\] {
     @media (width >= 80rem) {
       grid-template-columns: 150px 600px 1fr;
     }
   }
+  .xl\:grid-cols-\[150px_650px_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 150px 650px 1fr;
+    }
+  }
+  .xl\:grid-cols-\[150px_700px_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 150px 700px 1fr;
+    }
+  }
+  .xl\:grid-cols-\[150px_800px_1fr\] {
+    @media (width >= 80rem) {
+      grid-template-columns: 150px 800px 1fr;
+    }
+  }
   .xl\:grid-rows-1 {
     @media (width >= 80rem) {
       grid-template-rows: repeat(1, minmax(0, 1fr));
+    }
+  }
+  .xl\:items-baseline {
+    @media (width >= 80rem) {
+      align-items: baseline;
+    }
+  }
+  .xl\:items-center {
+    @media (width >= 80rem) {
+      align-items: center;
     }
   }
   .xl\:items-start {
@@ -789,6 +841,21 @@
   .xl\:bg-\[url\(\/images\/bg-main-desktop\.png\)\] {
     @media (width >= 80rem) {
       background-image: url(/images/bg-main-desktop.png);
+    }
+  }
+  .xl\:text-center {
+    @media (width >= 80rem) {
+      text-align: center;
+    }
+  }
+  .xl\:text-justify {
+    @media (width >= 80rem) {
+      text-align: justify;
+    }
+  }
+  .xl\:text-left {
+    @media (width >= 80rem) {
+      text-align: left;
     }
   }
   .xl\:text-base {
