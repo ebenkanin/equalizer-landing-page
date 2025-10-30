@@ -750,6 +750,11 @@
       justify-content: center;
     }
   }
+  .md\:justify-start {
+    @media (width >= 48rem) {
+      justify-content: flex-start;
+    }
+  }
   .md\:gap-2 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 2);
@@ -783,6 +788,16 @@
   .md\:bg-cover {
     @media (width >= 48rem) {
       background-size: cover;
+    }
+  }
+  .md\:text-left {
+    @media (width >= 48rem) {
+      text-align: left;
+    }
+  }
+  .md\:text-start {
+    @media (width >= 48rem) {
+      text-align: start;
     }
   }
   .md\:text-sm {
