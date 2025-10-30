@@ -217,6 +217,12 @@
   .left-\[50\%\] {
     left: 50%;
   }
+  .order-0 {
+    order: 0;
+  }
+  .order-1 {
+    order: 1;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -268,6 +274,9 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
+  .h-\[33px\] {
+    height: 33px;
+  }
   .h-\[50\%\] {
     height: 50%;
   }
@@ -298,8 +307,17 @@
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
+  .w-\[80\%\] {
+    width: 80%;
+  }
+  .w-\[147px\] {
+    width: 147px;
+  }
   .w-\[312px\] {
     width: 312px;
+  }
+  .w-fit {
+    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -335,11 +353,26 @@
     --tw-translate-x: calc(50% * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .scale-50 {
+    --tw-scale-x: 50%;
+    --tw-scale-y: 50%;
+    --tw-scale-z: 50%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .scale-75 {
+    --tw-scale-x: 75%;
+    --tw-scale-y: 75%;
+    --tw-scale-z: 75%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .resize {
     resize: both;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
@@ -577,6 +610,16 @@
       bottom: 20%;
     }
   }
+  .md\:order-2 {
+    @media (width >= 48rem) {
+      order: 2;
+    }
+  }
+  .md\:order-3 {
+    @media (width >= 48rem) {
+      order: 3;
+    }
+  }
   .md\:row-span-2 {
     @media (width >= 48rem) {
       grid-row: span 2 / span 2;
@@ -592,9 +635,19 @@
       margin-top: calc(var(--spacing) * 0);
     }
   }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
   .md\:h-16 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:h-\[300px\] {
+    @media (width >= 48rem) {
+      height: 300px;
     }
   }
   .md\:h-\[400px\] {
@@ -632,14 +685,34 @@
       width: 120%;
     }
   }
+  .md\:max-w-\[50\%\] {
+    @media (width >= 48rem) {
+      max-width: 50%;
+    }
+  }
+  .md\:max-w-\[60\%\] {
+    @media (width >= 48rem) {
+      max-width: 60%;
+    }
+  }
   .md\:max-w-\[65\%\] {
     @media (width >= 48rem) {
       max-width: 65%;
     }
   }
+  .md\:max-w-\[70\%\] {
+    @media (width >= 48rem) {
+      max-width: 70%;
+    }
+  }
   .md\:max-w-\[75\%\] {
     @media (width >= 48rem) {
       max-width: 75%;
+    }
+  }
+  .md\:grid-cols-\[3fr_2fr\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 3fr 2fr;
     }
   }
   .md\:grid-cols-\[458px_100px\] {
@@ -655,6 +728,26 @@
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
+    }
+  }
+  .md\:items-center {
+    @media (width >= 48rem) {
+      align-items: center;
+    }
+  }
+  .md\:items-end {
+    @media (width >= 48rem) {
+      align-items: flex-end;
+    }
+  }
+  .md\:items-start {
+    @media (width >= 48rem) {
+      align-items: flex-start;
+    }
+  }
+  .md\:justify-center {
+    @media (width >= 48rem) {
+      justify-content: center;
     }
   }
   .md\:gap-2 {
@@ -753,9 +846,29 @@
       max-width: 85%;
     }
   }
+  .xl\:order-2 {
+    @media (width >= 80rem) {
+      order: 2;
+    }
+  }
+  .xl\:order-3 {
+    @media (width >= 80rem) {
+      order: 3;
+    }
+  }
+  .xl\:row-span-2 {
+    @media (width >= 80rem) {
+      grid-row: span 2 / span 2;
+    }
+  }
   .xl\:flex {
     @media (width >= 80rem) {
       display: flex;
+    }
+  }
+  .xl\:h-\[400px\] {
+    @media (width >= 80rem) {
+      height: 400px;
     }
   }
   .xl\:w-full {
@@ -928,6 +1041,21 @@
   inherits: false;
   initial-value: 0;
 }
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -986,6 +1114,9 @@
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
